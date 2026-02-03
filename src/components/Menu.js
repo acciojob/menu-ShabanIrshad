@@ -27,7 +27,7 @@ const Menu=({data})=>{
         </div>
         <div className='dish-items'>
             {dishesh.map((dish,index)=>
-                <div key={index} className='dish-item'>
+                <div key={index} data-test-id={`menu-item-${dish.category}`} className='dish-item'>
                     <img src={dish.image} alt='image'/>
                     <div>
                         <h4>{dish.name}</h4>
