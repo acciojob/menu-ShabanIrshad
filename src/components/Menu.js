@@ -19,7 +19,9 @@ const Menu=({data})=>{
         <h1 className='heading'>Our Menu</h1>
         <hr className='underline'></hr>
         <div className='dish-category'>
-            {category.map((dish,index)=><button key={index} onClick={()=>handleDish(dish)}>{dish}</button>)}
+            <button id='filter-btn-1' onClick={()=>handleDish('breakfast')}>Breakfast</button>
+            <button id='filter-btn-2' onClick={()=>handleDish('lunch')}>Lunch</button>
+            <button id='filter-btn-3' onClick={()=>handleDish('shakes')}>Shakes</button>
         </div>
         <div className='dish-items'>
             {dishArray.map((dish,index)=>
