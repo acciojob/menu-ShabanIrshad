@@ -1,0 +1,48 @@
+#main{
+    border:1px solid red;
+    width:90%;
+    margin:auto;
+    text-align: center;
+}
+.heading{
+    font-weight: 900;
+    /* font-size: 1.2rem; */
+    color:blueviolet;
+}
+.underline{
+    /* color:blueviolet; */
+    border:5px solid blueviolet;
+    border-radius:15px;
+    width:15%;    
+    margin:-20px auto;
+}
+.dish-category{
+    border:1px solid black;
+    padding:10px;
+    margin:20px;
+}
+.dish-category>button{
+    /* border:1px solid black; */
+    padding:0px 10px;
+    margin:10px;
+    border:none;
+    background-color: transparent;
+    color:rgb(107, 107, 40);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.dish-items{
+    background-color: beige;
+    /* display: flex; */
+    border:1px solid red;
+}
+.dish-item{
+    width:40%;
+    height:30%;
+    display: flex;
+    border:1px solid black;
+}
+.dish-item>img{
+    width:50px;
+    height: 50px;
+}
