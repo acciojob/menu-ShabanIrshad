@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Menu=({data})=>{
     const {dishArray,setDishArray}=data;
+    const [dishesh,setDishesh]=useState([...dishArray]);
     // console.log(dishArray);
     const cat=dishArray.map((dish)=>dish.category);
     const categoryData=new Set([...cat]);
@@ -11,7 +12,8 @@ const Menu=({data})=>{
         console.log(dish);
         console.log(dishArray);
         const arr=dishArray.filter( (item) => item.category === dish);
-        setDishArray([...arr]);
+        console.log(arr);
+        setDishesh([...arr]);
         // console.log(arr);
     }
     return (
@@ -24,7 +26,7 @@ const Menu=({data})=>{
             <button id='filter-btn-3' onClick={()=>handleDish('Shakes')}>Shakes</button>
         </div>
         <div className='dish-items'>
-            {dishArray.map((dish,index)=>
+            {dishesh.map((dish,index)=>
                 <div key={index} className='dish-item'>
                     <img src={dish.image} alt='image'/>
                     <div>
