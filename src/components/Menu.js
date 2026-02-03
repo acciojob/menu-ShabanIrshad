@@ -16,6 +16,10 @@ const Menu=({data})=>{
         setDishesh([...arr]);
         // console.log(arr);
     }
+    const change=(str)=>{
+        return (str.charAt(0).toLowerCase()+str.slice(1,str.length));
+    }
+    // change('Mohd');
     return (
         <>
         <h1 className='heading'>Our Menu</h1>
@@ -27,7 +31,7 @@ const Menu=({data})=>{
         </div>
         <div className='dish-items'>
             {dishesh.map((dish,index)=>
-                <div key={index} data-test-id={`menu-item-${dish.category}`} className='dish-item'>
+                <div key={index} data-test-id={`menu-item-${chnage(dish.category)}`} className='dish-item'>
                     <img src={dish.image} alt='image'/>
                     <div>
                         <h4>{dish.name}</h4>
