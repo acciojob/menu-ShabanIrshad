@@ -31,7 +31,7 @@ const Menu=({data})=>{
         </div>
         <div className='dish-items'>
             {dishesh.map((dish,index)=>
-                <div key={index} data-test-id={`menu-item-${chnage(dish.category)}`} className='dish-item'>
+                <div key={index} data-test-id={`menu-item-${change(dish.category)}`} className='dish-item'>
                     <img src={dish.image} alt='image'/>
                     <div>
                         <h4>{dish.name}</h4>
